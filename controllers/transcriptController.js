@@ -81,7 +81,7 @@ const deleteTranscript = asyncHandler(async (req, res) => {
       "User don't have permission to update other user transcript"
     );
   }
-  await Contact.deleteOne({ _id: req.params.id });
+  await Transcript.deleteOne({ _id: req.params.id });
   res.status(200).json(transcript);
 });
 
